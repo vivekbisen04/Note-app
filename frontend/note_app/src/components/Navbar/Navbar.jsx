@@ -1,0 +1,29 @@
+import React,{useState}from 'react'
+import ProfileInfo from '../Cards/ProfileInfo'
+import SearchBar from '../SearchBar/SearchBar';
+
+const Navbar = ({ userInfo, userName, searchQuery, setSearchQuery }) => {
+  
+  const handleSearch = () => {
+    // Optionally, you can implement additional search logic here
+  };
+
+  const onClearSearch = () => {
+    setSearchQuery("");
+  };
+
+  return (
+    <div className="bg-white flex items-center justify-between px-6 py-2 drop-shadow">
+      <h2 className="text-xl font-medium text-black py-2">Do It</h2>
+      <SearchBar
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        handleSearch={handleSearch}
+        onClearSearch={onClearSearch}
+      />
+      <ProfileInfo userInfo={userInfo} userName={userName} />
+    </div>
+  );
+};
+
+export default Navbar
