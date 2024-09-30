@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-
+require("dotenv").config();
 // connecting to db
 require("./connections/db");
 const Users = require("./models/user.model");
@@ -300,6 +300,6 @@ app.put("/pin-note/:noteID", authenticateToken, async (req, res) => {
 
 
 // Start the server
-app.listen(8000, () => {
-  console.log("Server is started on port->> 8000");
+app.listen(process.env.PORT || 8000, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
