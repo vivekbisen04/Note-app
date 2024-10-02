@@ -1,8 +1,9 @@
 # **Do It - Note-Taking App**
 
 A real-time note-taking app built with the **MERN** stack that allows users to create, edit, delete, and pin notes. This application features user authentication, searching functionality, and smooth user experience with modal-based interactions. Users can also filter notes by title through a search bar for easy access.
-
----
+```
+https://note-app-qzvq.onrender.com/
+```
 
 ## **Features**
 
